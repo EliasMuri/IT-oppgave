@@ -1,0 +1,29 @@
+<script>
+    let sjanse1 = [];
+    function sjanse() {
+        let nyeKast = 0;
+        let antKast = 5;
+        let runde = 1;
+        for (x = 0; x < 3; x++) {
+            console.log(`Etter terningkast ${runde}!`);
+            for (i = 0; i < antKast; i++) {
+                let terningkast = Math.floor(Math.random() * 6) + 1;
+                if (terningkast >= 5 || x == 2) {
+                    sjanse1.push(terningkast);
+                    nyeKast++;
+                }
+            }
+            antKast -= nyeKast;
+            nyeKast = 0;
+            runde++;
+            console.log(sjanse1);
+        }
+    }
+    sjanse();
+
+    let sum = 0;
+    for (j = 0; j < sjanse1.length; j++) {
+        sum += sjanse1[j];
+    }
+    console.log(sum);
+</script>

@@ -1,0 +1,32 @@
+<script>
+    let tall = [];
+    for (let i = 0; i < 10; i++) {
+        let tilfeldig = Math.floor(Math.random() * 10) + 1;
+        tall.push(tilfeldig);
+    }
+
+    console.log(`Usortert liste: ${tall}. `);
+
+    function bubblesort() {
+        //Bubblesort
+        let midl = 0;
+        for (let i = 0; i < tall.length; i++) {
+            for (let x = 0; x < tall.length - 1; x++) {
+                if (tall[x] > tall[x + 1]) {
+                    midl = tall[x];
+                    tall[x] = tall[x + 1];
+                    tall[x + 1] = midl;
+                    //console.log(tall);
+                }
+            }
+        }
+        console.time("BubbleSort");
+        console.log(`Sortert liste: ${tall}.`);
+        console.timeEnd("BubbleSort");
+    }
+    bubblesort();
+
+    //Selectionsort
+
+    //
+</script>

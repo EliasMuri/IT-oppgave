@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <h1 div="tittel">Tre på rad</h1>
+
+        <div data-cell-index="0" id="cell"></div>
+        <div data-cell-index="1" id="cell"></div>
+        <div data-cell-index="2" id="cell"></div>
+        <div data-cell-index="3" id="cell"></div>
+        <div data-cell-index="4" id="cell"></div>
+        <div data-cell-index="5" id="cell"></div>
+        <div data-cell-index="6" id="cell"></div>
+        <div data-cell-index="7" id="cell"></div>
+        <div data-cell-index="8" id="cell"></div>
+
+        <script>
+            let game = [
+                ["_", "_", "_"],
+                ["_", "_", "_"],
+                ["_", "_", "_"],
+            ];
+
+            game[Math.floor(Math.random() * 2) + 1][
+                Math.floor(Math.random() * 2) + 1
+            ] = "x";
+            game[Math.floor(Math.random() * 2) + 1][
+                Math.floor(Math.random() * 2) + 1
+            ] = "o";
+            game[Math.floor(Math.random() * 2) + 1][
+                Math.floor(Math.random() * 2) + 1
+            ] = "x";
+            game[Math.floor(Math.random() * 2) + 1][
+                Math.floor(Math.random() * 2) + 1
+            ] = "o";
+            game[Math.floor(Math.random() * 2) + 1][
+                Math.floor(Math.random() * 2) + 1
+            ] = "x";
+            game[Math.floor(Math.random() * 2) + 1][
+                Math.floor(Math.random() * 2) + 1
+            ] = "o";
+            game[Math.floor(Math.random() * 2) + 1][
+                Math.floor(Math.random() * 2) + 1
+            ] = "x";
+
+            console.log(game);
+        </script>
+    </body>
+</html>

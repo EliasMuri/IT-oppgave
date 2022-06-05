@@ -1,0 +1,55 @@
+<script>
+    function sjanse() {
+        let sjanse1 = [];
+        let sum = 0;
+        for (j = 0; j < 1000; j++) {
+            let antKast = 5;
+            let nyeKast = 0;
+            for (x = 0; x < 3; x++) {
+                for (i = 0; i < antKast; i++) {
+                    let terningkast = Math.floor(Math.random() * 6) + 1;
+                    if (terningkast >= 4 || x == 2) {
+                        sjanse1.push(terningkast);
+                        nyeKast++;
+                        sum += terningkast;
+                    }
+                }
+                antKast -= nyeKast;
+                nyeKast = 0;
+            }
+        }
+        console.log(sjanse1);
+        let gjennomsnitt = sum / sjanse1.length;
+        console.log(
+            `Gjennomsnittsverdien for hver terning er ${gjennomsnitt}.`
+        );
+    }
+    sjanse();
+
+    function sjanse2() {
+        let sjanse1 = [];
+        let sum = 0;
+        for (j = 0; j < 1000; j++) {
+            let antKast = 5;
+            let nyeKast = 0;
+            for (x = 0; x < 3; x++) {
+                for (i = 0; i < antKast; i++) {
+                    let terningkast = Math.floor(Math.random() * 6) + 1;
+                    if (terningkast >= 5 || x == 2) {
+                        sjanse1.push(terningkast);
+                        nyeKast++;
+                        sum += terningkast;
+                    }
+                }
+                antKast -= nyeKast;
+                nyeKast = 0;
+            }
+        }
+        console.log(sjanse1);
+        let gjennomsnitt = sum / sjanse1.length;
+        console.log(
+            `Gjennomsnittsverdien for hver terning er ${gjennomsnitt}.`
+        );
+    }
+    sjanse2();
+</script>

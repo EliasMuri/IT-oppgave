@@ -1,0 +1,23 @@
+<script>
+    function systemTest() {
+        let totallsystem = 1101;
+        let titallsystem = 1 * 2 ** 3 + 1 * 2 ** 2 + 0 * 2 ** 1 + 1 * 2 ** 0;
+        console.log(
+            `Totallsystem: ${totallsystem} og titallsystem: ${titallsystem}.`
+        );
+    }
+    systemTest();
+
+    function tallsystem() {
+        let totallsystem = "1102"; //prompt("Skriv inn et tall ved bruk av enere og nullere");
+        //let tekstTilTall = Number(totallsystem);
+        let n = totallsystem.length;
+        let sum = 0;
+        for (i = 0; i < n; i++) {
+            let siffer = totallsystem[i] * 2 ** (n - i);
+            sum += siffer;
+            console.log(siffer, sum);
+        }
+    }
+    tallsystem();
+</script>
